@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TOP APP BAR -->
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -19,7 +18,6 @@
             android:titleTextColor="@android:color/white"
             app:layout_scrollFlags="scroll|enterAlways" />
 
-        <!-- CONTENT -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvBooks"
             android:padding="16dp"
