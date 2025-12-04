@@ -7,5 +7,5 @@ data class Book(
     val releaseDate: String?,
     val description: String?,
     val pages: Int?,
-    val cover: String?    // ini URL cover dari API
+    val cover: String?    
 )
