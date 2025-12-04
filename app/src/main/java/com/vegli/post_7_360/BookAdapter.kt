@@ -19,7 +19,6 @@ class BookAdapter(private var list: List<Book>) :
         @RequiresApi(Build.VERSION_CODES.O)
         fun bind(book: Book) {
 
-            // Set text
             binding.txtTitle.text = book.title ?: ""
             binding.txtDate.text = formatDate(book.releaseDate ?: "")
 
@@ -28,12 +27,11 @@ class BookAdapter(private var list: List<Book>) :
                 .load(book.cover)
                 .into(binding.imgCover)
 
-            // Klik untuk ke detail
             binding.root.setOnClickListener {
                 val intent = Intent(binding.root.context, BookDetailActivity::class.java)
                 intent.putExtra("title", book.title)
                 intent.putExtra("date", book.releaseDate)
-                intent.putExtra("cover", book.cover)  // kirim cover
+                intent.putExtra("cover", book.cover)  
                 intent.putExtra("description", book.description)
                 binding.root.context.startActivity(intent)
             }
